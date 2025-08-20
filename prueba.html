@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sabino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#about">Más información</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Pantalla de bienvenida -->
+        
+        <img src="bg_img-Photoroom.png" alt="hilera de letras con el nombre 'Ana'.">
+        
+        <section id="inicio">
+            
+            <div id="external">
+                
+                <p class="name"><a href="#user_tag">@ana_sabino</a></p>
+                <p>Desarrolladora Web</p>
+                <img src="char.png" alt="Personaje de caricatura. Chica de piel morena y ojos tímidos sonriendo a la cámara.">
+                
+                <img src="heart.png" alt="Corazón.">
+                <img src="comment.png" alt="comentarios">
+                <img src="send.png" alt="ícono de enviar.">
+                
+                <div id="container"></div>
+                
+                <p>Desarrollando ideas desde lo cotidiano</p>
+                
+                <dialog id="contact_f">
+                    <h1>CONTACTO</h1>
+                    <form id="contact" action="https://formspree.io/f/xblkeqwq" method="POST">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        <input type="email" name="email" placeholder="Tu correo" required>
+                        <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje..." required></textarea>
+                        <button type="submit" id="bt_enviar">Enviar</button>
+                    </form>
+                    
+                    <p id="mensaje_aviso" style="color:brown; display: none;"></p>
+                
+                    <a href="https://github.com/ASabinoAcosta"><img src="github_logo_icon_229278.webp" alt="logo github"></a>
+                    <a href="linkedin.com/in/ana-karlamary-sabino-acosta-0a6b45328/"><img src="LinkedIn_icon.svg" alt="logo linkedin"></a>
+                    
+                    <button onclick="contact_f.close()">X</button>
+                </dialog>
+                
+                <button onclick="contact_f.showModal()">&gt;</button>
+                
+            </div>
+            <div id="box">
+                <img src="eyes.png" alt="Ojos de personaje caricatura.">
+                <img src="mouth.png" alt="sonrisa de personaje caricatura">
+                
+                <div id="internal">
+                    <h3>CV</h3>
+                </div>
+                
+            </div>
+            
+        </section>
+        <section id="about">
+            
+            <div class="circle"></div>
+            <img src="char.png">
+            
+            <h3 id="user_tag">@ana_sabino</h3>
+            
+            <p>1 <span>Años de estudio</span></p>
+            <p>1 <span>Proyectos</span></p>
+            <p>6 <span>Tecnologías</span></p>
+            <p>2 <span>Proyectos pendientes</span></p>
+            
+            <div id="tecnologias">
+                <img src="mysql-logo.svg" alt="logo MySQL">
+                <p>Intermedio</p>
+                <img src="html5-6652.svg" alt="logo HTML">
+                <p>Intermedio</p>
+                <img src="python.svg" alt="logo Python">
+                <p>Intermedio</p>
+                <img src="294692_css3_icon.svg" alt="logo css">
+                <p>Básico-inter</p>
+                <img src="C_Programming_Language.svg" alt="">
+                <p>Básico</p>
+                <img src="Git_icon.svg" alt="">
+                <p>Básico</p>
+            </div>
+            
+            <p>Soy una estudiante autodidacta y actual estudiante de software que busca aprender constantemente sobre nuevas tecnologías y crear grandes proyectos.</p>
+            
+            <p>Estudiando y creando más proyectos.</p>
+            
+            <div class="rayita"></div>
+            <img src="#" alt="">
+            <h4>Proyectos</h4>
+            <div class="rayita"></div>
+            
+            <div id="proyectos">
+                <div class="pr_tag"></div>
+            </div>    
+            
+        </section>
+    </main>
+    
+    <script>
+    
+        let ultima_vez = null;
+        const tiempo_espera = 30;
+        
+        document.getElementById("contact").addEventListener("submit", function(event){
+            
+            const ahora = new Date().getTime();
+            
+            if (ultima_vez && (ahora - ultima_vez)< tiempo_espera * 1000){
+                
+                event.preventDefault();
+                document.getElementById("mensaje_aviso").style.display = "block";
+                document.getElementById("mensaje_aviso").innerText = "Ya lo enviaste. Intenta más tarde.";
+                
+            } else {
+                ultima_vez = ahora;
+                document.getElementById("mensaje_aviso").style.display = "none";
+                
+                document.getElementById("btn_enviar").disabled = true;
+                document.getElementById("btn_enviar").innerText = "Enviar"
+            }
+            
+        });
+    
+    </script>
+    
+</body>
+</html>

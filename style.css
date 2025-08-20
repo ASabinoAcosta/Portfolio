@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    background-color: white;
+    background-image: radial-gradient(lightgray 1px, transparent 1px);
+    background-size: 20px 20px; 
+}
+nav{
+    width: 100%;
+    position: fixed;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+ul li a{
+    text-decoration: none;
+}
