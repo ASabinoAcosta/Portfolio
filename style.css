@@ -5,7 +5,77 @@ body{
     background-size: 20px 20px; 
 }
 
-.active{
+#bg{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.name a{
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+#external{
+    background-color: white;
+    display: flex;
+    width: 400px;
+    min-height: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#container{
+    width: 250px;
+    height: 300px;
+    background-color: #ffe76a;
+    position: absolute;
+    z-index: 0;
+    top: 168px;
+    border: black 4px solid;
+}
+
+#external .icon_intg{
+    width: 34px;
+    height: 34px;
+}
+
+#external .char{
+    width: 230px;
+    height: 320px;
+    z-index: 1;
+}
+
+#bt_contact{
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+#iconos{
+    display: flex;
+    gap: 15px;
+    margin-top: -25px;
+    margin-right: 85px;
+}
+#external #iconos{
+    align-items: center;
+}
+
+.activo{
     color: black;
     background-color: #ffed00;
 }
@@ -33,4 +103,31 @@ ul li a{
     border-radius: 5px;
     text-decoration: none;
     color: black;
+}
+
+#proyectos{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding-left: 23em;
+}
+
+.icon{
+    width: 94px;
+    height: 94px;
+}
+
+.rayita{
+    height: 2px;
+    width: 70%;
+    background-color: black;
+   
 }

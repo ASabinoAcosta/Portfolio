@@ -17,22 +17,29 @@
     <main>
         <!-- Pantalla de bienvenida -->
         
-        <img src="bg_img-Photoroom.png" alt="hilera de letras con el nombre 'Ana'.">
+        <img src="file.svg" alt="hilera de letras con el nombre 'Ana'." id="bg">
         
         <section id="inicio">
             
             <div id="external">
-                
-                <p class="name"><a href="#user_tag">@ana_sabino</a></p>
-                <p>Desarrolladora Web</p>
-                <img src="char.png" alt="Personaje de caricatura. Chica de piel morena y ojos tímidos sonriendo a la cámara.">
-                
-                <img src="heart.png" alt="Corazón.">
-                <img src="comment.png" alt="comentarios">
-                <img src="send.png" alt="ícono de enviar.">
-                
+                <div class="header-post">
+                    <p class="name"><a href="#user_tag">@ana_sabino</a></p>
+                    <p class="title">Desarrolladora Web</p>
+                </div>
+
+                <img class="char" src="char.png" alt="Personaje de caricatura. Chica de piel morena y ojos tímidos sonriendo a la cámara.">
+
                 <div id="container"></div>
-                
+                <div id="cuadro"></div>
+                <!-- Contenedor para el cuadro -->
+
+                <div id="iconos">
+                    <img class="icon_intg" src="heart.png" alt="Corazón.">
+                    <img class="icon_intg" src="comment.png" alt="comentarios">
+                    <img class="icon_intg" src="send.png" alt="ícono de enviar.">
+                </div>
+
+
                 <p>Desarrollando ideas desde lo cotidiano</p>
                 
                 <dialog id="contact_f">
@@ -52,7 +59,7 @@
                     <button onclick="contact_f.close()">X</button>
                 </dialog>
                 
-                <button onclick="contact_f.showModal()">&gt;</button>
+                <button id="bt_contact" onclick="contact_f.showModal()">&gt;</button>
                 
             </div>
             <div id="box">
@@ -97,14 +104,18 @@
             
             <p>Estudiando y creando más proyectos.</p>
             
-            <div class="rayita"></div>
-            <img src="#" alt="">
-            <h4>Proyectos</h4>
-            <div class="rayita"></div>
-            
             <div id="proyectos">
-                <div class="pr_tag"></div>
-            </div>    
+                <div class="rayita"></div>
+                <div class="group">
+                    <img class="icon" src="box-select-wh.webp" alt="">
+                    <h4>Proyectos</h4>
+                </div>
+                <div class="rayita"></div>
+                
+                <div id="proyectos_tag">
+                    <div class="pr_tag"></div>
+                </div>
+                </div>    
             
         </section>
     </main>
@@ -112,13 +123,13 @@
     <script>
     
         let ultima_vez = null;
-        const tiempo_espera = 30;
+        const tiempo_espera = 30000;
         
         document.getElementById("contact").addEventListener("submit", function(event){
             
-            const ahora = new Date().getTime();
+            const ahora = Date.now();
             
-            if (ultima_vez && (ahora - ultima_vez)< tiempo_espera * 1000){
+            if (ultima_vez && (ahora - ultima_vez)< tiempo_espera){
                 
                 event.preventDefault();
                 document.getElementById("mensaje_aviso").style.display = "block";
@@ -139,9 +150,29 @@
             const enlaces = document.querySelectorAll("nav ul li a");
         // Cuando el usuario haga scrol, resaltar el enlace que corresponde
             const resaltar_enlace_activo = () => {
-                // escuchamos la entrada de un scroll
-                
-            }
+            // Tomamos coordenadas de la sección en la ventana
+
+                const posicion = secciones.getBoundingClientRect();
+
+                const isVisible = (
+                    posicion.top >= 0 &&
+                    posicion.left >= 0 &&
+                    posicion.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    posicion.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+
+                if (isVisible){
+                    enlaces.classList.add("activo");
+                    secciones.classList.add("activo");
+                } else{
+                    enlaces.classList.remove("activo");
+                    secciones.classList.remove("activo");
+                }
+
+
+            };
+            
+            window.addEventListener("scroll", resaltar_enlace_activo);
     </script>
     
 </body>
