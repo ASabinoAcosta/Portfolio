@@ -47,15 +47,24 @@ body{
     border: black 4px solid;
 }
 
+.header-post{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 #external .icon_intg{
     width: 34px;
     height: 34px;
+    user-select: none;
 }
 
 #external .char{
     width: 230px;
     height: 320px;
     z-index: 1;
+    user-select: none;
 }
 
 #bt_contact{
@@ -63,6 +72,9 @@ body{
     width: 50px;
     height: 50px;
     background-color: transparent;
+}
+#bt_contact:hover{
+    background-color: rgba(255, 237, 0, 0.5);
 }
 
 #iconos{
@@ -129,5 +141,9 @@ ul li a{
     height: 2px;
     width: 70%;
     background-color: black;
-   
+}
+
+#info_redes img{
+    width: 54px;
+    height: 54px;
 }

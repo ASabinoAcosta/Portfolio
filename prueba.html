@@ -52,9 +52,11 @@
                     </form>
                     
                     <p id="mensaje_aviso" style="color:brown; display: none;"></p>
-                
-                    <a href="https://github.com/ASabinoAcosta"><img src="github_logo_icon_229278.webp" alt="logo github"></a>
-                    <a href="linkedin.com/in/ana-karlamary-sabino-acosta-0a6b45328/"><img src="LinkedIn_icon.svg" alt="logo linkedin"></a>
+                    
+                    <div id="info_redes">
+                        <a href="https://github.com/ASabinoAcosta"><img src="github_logo_icon_229278.webp" alt="logo github"></a>
+                        <a href="linkedin.com/in/ana-karlamary-sabino-acosta-0a6b45328/"><img src="LinkedIn_icon.svg" alt="logo linkedin"></a>
+                    </div>
                     
                     <button onclick="contact_f.close()">X</button>
                 </dialog>
@@ -124,8 +126,9 @@
     
         let ultima_vez = null;
         const tiempo_espera = 30000;
+        const form = document.getElementById("contact");
         
-        document.getElementById("contact").addEventListener("submit", function(event){
+        form.addEventListener("submit", function(event){
             
             const ahora = Date.now();
             
