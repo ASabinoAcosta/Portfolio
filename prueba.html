@@ -1,182 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Ana Sabino</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#about">Más información</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about">Más información</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <!-- Pantalla de bienvenida -->
-        
-        <img src="file.svg" alt="hilera de letras con el nombre 'Ana'." id="bg">
-        
-        <section id="inicio">
-            
-            <div id="external">
-                <div class="header-post">
-                    <p class="name"><a href="#user_tag">@ana_sabino</a></p>
-                    <p class="title">Desarrolladora Web</p>
-                </div>
+      <!-- Pantalla de bienvenida -->
 
-                <img class="char" src="char.png" alt="Personaje de caricatura. Chica de piel morena y ojos tímidos sonriendo a la cámara.">
+      <img src="file.svg" alt="hilera de letras con el nombre 'Ana'." id="bg" />
 
-                <div id="container"></div>
-                <div id="cuadro"></div>
-                <!-- Contenedor para el cuadro -->
+      <section id="inicio">
+        <div id="external">
+          <div class="header-post">
+            <p class="name"><a href="#user_tag">@ana_sabino</a></p>
+            <p class="title">Desarrolladora Web</p>
+          </div>
 
-                <div id="iconos">
-                    <img class="icon_intg" src="heart.png" alt="Corazón.">
-                    <img class="icon_intg" src="comment.png" alt="comentarios">
-                    <img class="icon_intg" src="send.png" alt="ícono de enviar.">
-                </div>
+          <img
+            class="char"
+            src="char.png"
+            alt="Personaje de caricatura. Chica de piel morena y ojos tímidos sonriendo a la cámara."
+          />
 
+          <div id="container"></div>
+          <div id="cuadro"></div>
+          <!-- Contenedor para el cuadro -->
 
-                <p>Desarrollando ideas desde lo cotidiano</p>
-                
-                <dialog id="contact_f">
-                    <h1>CONTACTO</h1>
-                    <form id="contact" action="https://formspree.io/f/xblkeqwq" method="POST">
-                        <input type="text" name="nombre" placeholder="Tu nombre" required>
-                        <input type="email" name="email" placeholder="Tu correo" required>
-                        <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje..." required></textarea>
-                        <button type="submit" id="bt_enviar">Enviar</button>
-                    </form>
-                    
-                    <p id="mensaje_aviso" style="color:brown; display: none;"></p>
-                    
-                    <div id="info_redes">
-                        <a href="https://github.com/ASabinoAcosta"><img src="github_logo_icon_229278.webp" alt="logo github"></a>
-                        <a href="linkedin.com/in/ana-karlamary-sabino-acosta-0a6b45328/"><img src="LinkedIn_icon.svg" alt="logo linkedin"></a>
-                    </div>
-                    
-                    <button onclick="contact_f.close()">X</button>
-                </dialog>
-                
-                <button id="bt_contact" onclick="contact_f.showModal()">&gt;</button>
-                
+          <div id="iconos">
+            <img class="icon_intg" src="heart.png" alt="Corazón." />
+            <img class="icon_intg" src="comment.png" alt="comentarios" />
+            <img class="icon_intg" src="send.png" alt="ícono de enviar." />
+          </div>
+
+          <p>Desarrollando ideas desde lo cotidiano</p>
+
+          <dialog id="contact_f">
+            <h1>CONTACTO</h1>
+            <form
+              id="contact"
+              action="https://formspree.io/f/xblkeqwq"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Tu correo"
+                required
+              />
+              <textarea
+                name="mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Mensaje..."
+                required
+              ></textarea>
+              <button type="submit" id="bt_enviar">Enviar</button>
+            </form>
+
+            <p id="mensaje_aviso" style="color: brown; display: none"></p>
+
+            <div id="info_redes">
+              <a href="https://github.com/ASabinoAcosta"
+                ><img src="github_logo_icon_229278.webp" alt="logo github"
+              /></a>
+              <a href="linkedin.com/in/ana-karlamary-sabino-acosta-0a6b45328/"
+                ><img src="LinkedIn_icon.svg" alt="logo linkedin"
+              /></a>
             </div>
-            <div id="box">
-                <img src="eyes.png" alt="Ojos de personaje caricatura.">
-                <img src="mouth.png" alt="sonrisa de personaje caricatura">
-                
-                <div id="internal">
-                    <h3>CV</h3>
-                </div>
-                
-            </div>
-            
-        </section>
-        <section id="about">
-            
-            <div class="circle"></div>
-            <img src="char.png">
-            
+
+            <button id="close_dialog" onclick="contact_f.close()">X</button>
+          </dialog>
+
+          <button id="bt_contact" onclick="contact_f.showModal()">&gt;</button>
+        </div>
+        <div id="box">
+          <img src="eyes.png" alt="Ojos de personaje caricatura." />
+
+          <div id="internal">
+            <h3>CV</h3>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="columna_izquierda">
+          <div class="circulo"></div>
+          <img class="personaje" src="char.png" alt="Personaje Ana" />
+        </div>
+
+        <div class="columna_derecha">
+          <div class="nombre_bandera">
             <h3 id="user_tag">@ana_sabino</h3>
-            
-            <p>1 <span>Años de estudio</span></p>
-            <p>1 <span>Proyectos</span></p>
-            <p>6 <span>Tecnologías</span></p>
-            <p>2 <span>Proyectos pendientes</span></p>
-            
-            <div id="tecnologias">
-                <img src="mysql-logo.svg" alt="logo MySQL">
-                <p>Intermedio</p>
-                <img src="html5-6652.svg" alt="logo HTML">
-                <p>Intermedio</p>
-                <img src="python.svg" alt="logo Python">
-                <p>Intermedio</p>
-                <img src="294692_css3_icon.svg" alt="logo css">
-                <p>Básico-inter</p>
-                <img src="C_Programming_Language.svg" alt="">
-                <p>Básico</p>
-                <img src="Git_icon.svg" alt="">
-                <p>Básico</p>
+            <img
+              class="bandera"
+              src="Flag_of_the_Dominican_Republic.png"
+              alt="Bandera República Dominicana"
+            />
+          </div>
+
+          <div class="estadisticas">
+            <div class="stat">
+              <strong>0.5</strong><span>Años de estudio</span>
             </div>
-            
-            <p>Soy una estudiante autodidacta y actual estudiante de software que busca aprender constantemente sobre nuevas tecnologías y crear grandes proyectos.</p>
-            
-            <p>Estudiando y creando más proyectos.</p>
-            
-            <div id="proyectos">
-                <div class="rayita"></div>
-                <div class="group">
-                    <img class="icon" src="box-select-wh.webp" alt="">
-                    <h4>Proyectos</h4>
+            <div class="stat"><strong>1</strong><span>Proyectos</span></div>
+            <div class="stat"><strong>6</strong><span>Tecnologías</span></div>
+            <div class="stat">
+              <strong>2</strong><span>Proyectos pendientes</span>
+            </div>
+          </div>
+
+          <div id="tecnologias">
+            <div class="tec">
+              <img src="mysql-logo.svg" alt="MySQL" />
+              <p>Intermedio</p>
+            </div>
+
+            <div class="tec">
+              <img src="html5-6652.svg" alt="HTML" />
+              <p>Intermedio</p>
+            </div>
+
+            <div class="tec">
+              <img src="python.svg" alt="Python" />
+              <p>Intermedio</p>
+            </div>
+
+            <div class="tec">
+              <img src="294692_css3_icon.svg" alt="CSS" />
+              <p>Básico-inter</p>
+            </div>
+
+            <div class="tec">
+              <img src="C_Programming_Language.svg" alt="C" />
+              <p>Básico</p>
+            </div>
+
+            <div class="tec">
+              <img src="Git_icon.svg" alt="Git" />
+              <p>Básico</p>
+            </div>
+          </div>
+
+          <p class="descripcion">
+            Soy una estudiante autodidacta y actual estudiante de software que
+            busca aprender constantemente sobre nuevas tecnologías y crear
+            grandes proyectos.
+          </p>
+
+          <p class="frase_final">Estudiando y creando más proyectos.</p>
+
+          <div id="proyectos">
+            <div class="rayita"></div>
+
+            <div class="grupo_proyectos">
+              <img class="icono" src="box-select-wh.webp" alt="" />
+              <h4>Proyectos</h4>
+            </div>
+
+            <div class="rayita"></div>
+
+            <div class="tarjeta_proyecto">
+              <div class="imagen_proyecto">
+                <img src="prev_portfolio.png" alt="Vista previa del proyecto" />
+              </div>
+
+              <div class="contenido_proyecto">
+                <h5 class="titulo_proyecto">Portafolio ver.1(actual)</h5>
+
+                <p class="descripcion_proyecto">
+                  Página portafolio simple para facilitar contacto y
+                  presentación de trabajos.
+                </p>
+
+                <div class="tecnologias_proyecto">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
                 </div>
-                <div class="rayita"></div>
-                
-                <div id="proyectos_tag">
-                    <div class="pr_tag"></div>
+
+                <a href="#" class="boton_proyecto" target="_blank">
+                  Ver proyecto
+                </a>
+              </div>
+            </div>
+            <div class="rayita"></div>
+            <h4 class="sub_cat">En proceso</h4>
+            <div class="rayita"></div>
+            <div class="tarjeta_proyecto">
+              <div class="imagen_proyecto">
+                <img src="prev_portfolio.png" alt="Vista previa del proyecto" />
+              </div>
+
+              <div class="contenido_proyecto">
+                <h5 class="titulo_proyecto">Portafolio ver.1(actual)</h5>
+
+                <p class="descripcion_proyecto">
+                  Página portafolio simple para facilitar contacto y
+                  presentación de trabajos.
+                </p>
+
+                <div class="tecnologias_proyecto">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
                 </div>
-                </div>    
-            
-        </section>
+
+                <a href="#" class="boton_proyecto" target="_blank">
+                  Ver proyecto
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    
+
     <script>
-    
-        let ultima_vez = null;
-        const tiempo_espera = 30000;
-        const form = document.getElementById("contact");
-        
-        form.addEventListener("submit", function(event){
-            
-            const ahora = Date.now();
-            
-            if (ultima_vez && (ahora - ultima_vez)< tiempo_espera){
-                
-                event.preventDefault();
-                document.getElementById("mensaje_aviso").style.display = "block";
-                document.getElementById("mensaje_aviso").innerText = "Ya lo enviaste. Intenta más tarde.";
-                
-            } else {
-                ultima_vez = ahora;
-                document.getElementById("mensaje_aviso").style.display = "none";
-                
-                document.getElementById("btn_enviar").disabled = true;
-                document.getElementById("btn_enviar").innerText = "Enviar"
-            }
-            
-        });
+      let ultima_vez = null;
+      const tiempo_espera = 30000;
+      const form = document.getElementById("contact");
 
-        // Necesitamos tomar la información de secciones y enlaces en nav.
-            const secciones = document.querySelectorAll("section");
-            const enlaces = document.querySelectorAll("nav ul li a");
-        // Cuando el usuario haga scrol, resaltar el enlace que corresponde
-            const resaltar_enlace_activo = () => {
-            // Tomamos coordenadas de la sección en la ventana
+      form.addEventListener("submit", function (event) {
+        const ahora = Date.now();
 
-                const posicion = secciones.getBoundingClientRect();
+        if (ultima_vez && ahora - ultima_vez < tiempo_espera) {
+          event.preventDefault();
+          document.getElementById("mensaje_aviso").style.display = "block";
+          document.getElementById("mensaje_aviso").innerText =
+            "Ya lo enviaste. Intenta más tarde.";
+        } else {
+          ultima_vez = ahora;
+          document.getElementById("mensaje_aviso").style.display = "none";
 
-                const isVisible = (
-                    posicion.top >= 0 &&
-                    posicion.left >= 0 &&
-                    posicion.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    posicion.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
+          document.getElementById("btn_enviar").disabled = true;
+          document.getElementById("btn_enviar").innerText = "Enviar";
+        }
+      });
 
-                if (isVisible){
-                    enlaces.classList.add("activo");
-                    secciones.classList.add("activo");
-                } else{
-                    enlaces.classList.remove("activo");
-                    secciones.classList.remove("activo");
-                }
+      // Necesitamos tomar la información de secciones y enlaces en nav.
+      const secciones = document.querySelectorAll("section");
+      const enlaces = document.querySelectorAll("nav ul li a");
+      // Cuando el usuario haga scrol, resaltar el enlace que corresponde
+      const resaltar_enlace_activo = () => {
+        // Tomamos coordenadas de la sección en la ventana
 
+        const posicion = secciones.getBoundingClientRect();
 
-            };
-            
-            window.addEventListener("scroll", resaltar_enlace_activo);
+        const isVisible =
+          posicion.top >= 0 &&
+          posicion.left >= 0 &&
+          posicion.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          posicion.right <=
+            (window.innerWidth || document.documentElement.clientWidth);
+
+        if (isVisible) {
+          enlaces.classList.add("activo");
+          secciones.classList.add("activo");
+        } else {
+          enlaces.classList.remove("activo");
+          secciones.classList.remove("activo");
+        }
+      };
+
+      window.addEventListener("scroll", resaltar_enlace_activo);
     </script>
-    
-</body>
+  </body>
 </html>
