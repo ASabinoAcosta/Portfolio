@@ -37,7 +37,10 @@ body {
   align-items: center;
   gap: 1rem;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 #container {
   width: 250px;
   height: 292px;
@@ -185,6 +188,11 @@ body {
   border-radius: 12px;
   font-weight: bold;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+#internal:hover {
+  background-color: #ffd000;
+  transform: translateY(-2px);
+  transition: 0.3s ease;
 }
 #info_redes img {
   width: 54px;
