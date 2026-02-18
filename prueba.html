@@ -203,21 +203,22 @@
             <div class="rayita"></div>
             <div class="tarjeta_proyecto">
               <div class="imagen_proyecto">
-                <img src="prev_portfolio.png" alt="Vista previa del proyecto" />
+                <img src="med_prev.png" alt="Vista previa del proyecto" />
               </div>
 
               <div class="contenido_proyecto">
-                <h5 class="titulo_proyecto">Portafolio ver.1(actual)</h5>
+                <h5 class="titulo_proyecto">Medquit</h5>
 
                 <p class="descripcion_proyecto">
-                  Página portafolio simple para facilitar contacto y
-                  presentación de trabajos.
+                  Programa para registro de pacientes y sincronización y avisos
+                  de citas.
                 </p>
 
                 <div class="tecnologias_proyecto">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
+                  <span>Python</span>
+                  <span>MySQL</span>
+                  <span>modulos Python UI/UX</span>
+                  <span>PHP(aún sin confirmar)</span>
                 </div>
 
                 <a href="#" class="boton_proyecto" target="_blank">
@@ -251,34 +252,6 @@
           document.getElementById("btn_enviar").innerText = "Enviar";
         }
       });
-
-      // Necesitamos tomar la información de secciones y enlaces en nav.
-      const secciones = document.querySelectorAll("section");
-      const enlaces = document.querySelectorAll("nav ul li a");
-      // Cuando el usuario haga scrol, resaltar el enlace que corresponde
-      const resaltar_enlace_activo = () => {
-        // Tomamos coordenadas de la sección en la ventana
-
-        const posicion = secciones.getBoundingClientRect();
-
-        const isVisible =
-          posicion.top >= 0 &&
-          posicion.left >= 0 &&
-          posicion.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-          posicion.right <=
-            (window.innerWidth || document.documentElement.clientWidth);
-
-        if (isVisible) {
-          enlaces.classList.add("activo");
-          secciones.classList.add("activo");
-        } else {
-          enlaces.classList.remove("activo");
-          secciones.classList.remove("activo");
-        }
-      };
-
-      window.addEventListener("scroll", resaltar_enlace_activo);
     </script>
   </body>
 </html>

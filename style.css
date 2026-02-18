@@ -332,11 +332,7 @@ ul li a {
 }
 
 .sub_cat {
-  color: #ffe44d;
-}
-.sub_cat:hover {
   color: #c44;
-  transition: 0.5s;
 }
 .grupo_proyectos {
   display: flex;
